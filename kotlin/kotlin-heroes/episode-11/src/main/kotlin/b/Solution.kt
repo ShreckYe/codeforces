@@ -6,11 +6,9 @@ fun main() {
 }
 
 fun testCase() {
-    TODO("read input")
-    //val _ = readLine()!!.toInt()/.toLong()
-    //val _ = readLine()!!.splitToSequence(' ').map { it.toInt()/.toLong() }.toList()
+   val nn = readln().toInt()
 
-    TODO("compute")
+    val answer = sequenceOf(1) + (nn downTo 2).asSequence()
 
-    println(TODO("print output") as String)
+    println(answer.joinToString(" "))
 }

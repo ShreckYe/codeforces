@@ -6,11 +6,12 @@ fun main() {
 }
 
 fun testCase() {
-    TODO("read input")
-    //val _ = readLine()!!.toInt()/.toLong()
-    //val _ = readLine()!!.splitToSequence(' ').map { it.toInt()/.toLong() }.toList()
+    val nn = readln().toInt()
+    val dd = readln().splitToSequence(' ').map { it.toInt() }.toList()
 
-    TODO("compute")
+    val minSkill = dd.subList(0, dd.lastIndex).max()
+    val lastD = dd.last()
+    val skill = if (minSkill == lastD - 1) minSkill else null
 
-    println(TODO("print output") as String)
+    println(skill ?: "Ambiguous")
 }

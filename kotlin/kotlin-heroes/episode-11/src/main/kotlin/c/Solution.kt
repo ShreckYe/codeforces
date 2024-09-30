@@ -6,11 +6,13 @@ fun main() {
 }
 
 fun testCase() {
-    TODO("read input")
-    //val _ = readLine()!!.toInt()/.toLong()
-    //val _ = readLine()!!.splitToSequence(' ').map { it.toInt()/.toLong() }.toList()
+    val ss = readln()
 
-    TODO("compute")
+    val blocks = ss.split('+')
+    val midBlocks = blocks.subList(1, blocks.lastIndex)
+    val blockMaxes = midBlocks.asSequence().map { block ->
+        (1..block.lastIndex).maxOf { block.substring(0, it).toLong() + block.substring(it).toLong() }
+    }
 
-    println(TODO("print output") as String)
+    println(blocks.first().toLong() + blockMaxes.sum() + blocks.last().toLong())
 }
