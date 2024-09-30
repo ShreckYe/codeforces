@@ -4,4 +4,5 @@ plugins {
 rootProject.name = "codeforces-kotlin"
 
 include("kotlin-heroes:practice-11")
+include("kotlin-heroes:episode-11")
 include("test")
